@@ -7,10 +7,13 @@ RUN --mount=type=ssh pip install --no-cache-dir --prefix=/install -r requirement
 FROM python:3.12-alpine
 LABEL org.opencontainers.image.authors="Kamil Rodak"
 
+ARG DEFAULT_TZ=Europe/Warsaw
+
 # brak plików .pyc
 ENV PYTHONDONTWRITEBYTECODE=1 \
 # brak buforowania wyjścia - natychmiastowe logi
-    PYTHONUNBUFFERED=1 
+    PYTHONUNBUFFERED=1 \
+    TZ=${DEFAULT_TZ}
 
 WORKDIR /app
 

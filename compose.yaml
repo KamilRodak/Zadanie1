@@ -15,6 +15,7 @@ services:
       - 2137:2137
     environment:
       - OPENWEATHER_API_KEY
+      - TZ=Europe/London
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
