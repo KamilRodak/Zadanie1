@@ -9,7 +9,7 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
 PORT = 2137
-KLUCZYK = "bca3f9c603b81dfe8299380081da9eb3"
+KLUCZYK = os.environ.get('OPENWEATHER_API_KEY')
 
 miasta = [
     # polska
